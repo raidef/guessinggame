@@ -1,6 +1,6 @@
 # guessinggame
 
-function compare {
+function compareNumbers {
   if [[ $1 -gt $2 ]]
   then
     echo 'Too high - try again with a lower number!'
@@ -11,9 +11,9 @@ function compare {
 
 filesInDir=$(ls -l | wc -l)
 while 
-    echo 'Guess the number of files in the current directory:'
+    echo -n 'Guess the number of files in the current directory: '
     read  inputNumber
-    compare $inputNumber $filesInDir
+    compareNumbers $inputNumber $filesInDir
     [[ $inputNumber -ne  $filesInDir ]]
     do :; 
 done
