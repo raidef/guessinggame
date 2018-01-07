@@ -1,4 +1,4 @@
-# guessinggame
+#!/usr/bin/env bash
 
 function compareNumbers {
   if [[ $1 -gt $2 ]]
